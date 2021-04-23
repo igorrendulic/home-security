@@ -1,0 +1,16 @@
+name: chryshome
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7.7
+  - numpy=1.18.1
+  - pip=20.0.2
+  - opencv=4.4.0
+  - flask=1.1.2
+  - flask-cors=3.0.10
+  - opencv=4.4.0
+  - psycopg2=2.8.6
+  - pip:
+    - grpcio
+    - grpcio-tools
+    - imutils
