@@ -1,0 +1,20 @@
+
+<div class="row">
+    <div class="col-lg-12">
+      <nb-card>
+        <nb-card-header>Add a friend using webcam</nb-card-header>
+        <nb-card-body>
+            
+            <div class="col-md-12 col-lg-12">
+              <webcam (imageCapture)="handleImage($event)" [videoOptions]="videoOptions" [trigger]="triggerObservable" 
+              [imageQuality]="1" (initError)="handleInitError($event)"></webcam>
+
+              <div class="snapshotbutton">
+                <button nbButton matRipple status="primary" (click)="triggerSnapshot();">Take A Snapshot</button>
+              </div>
+            </div>
+            
+        </nb-card-body>
+      </nb-card>
+    </div>
+</div>

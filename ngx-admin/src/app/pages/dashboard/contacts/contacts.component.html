@@ -1,0 +1,43 @@
+<nb-card size="giant">
+  <nb-tabset fullWidth>
+
+    <nb-tab tabTitle="All">
+      
+      
+          <nb-card class="list-card" size="large">
+            <nb-card-header>All Recent Visitors</nb-card-header>
+            <nb-list>
+              <nb-list-item matRipple class="contact" *ngFor="let c of recent">
+                <nb-user [picture]="c.user.picture" [name]="c.user.name" [title]="c.time | date: 'medium'" size="large"></nb-user>
+                <!-- <span class="caption">{{ c.time | date: 'shortTime' }}</span> -->
+                <nb-icon icon="edit-2" pack="eva"></nb-icon> 
+              </nb-list-item>
+            </nb-list>
+            <!-- <nb-list
+              nbInfiniteList
+              [threshold]="500"
+              (bottomThreshold)="loadNext(firstCard)">
+              <nb-list-item *ngFor="let newsPost of firstCard.news">
+                <ngx-news-post [post]="newsPost"></ngx-news-post>
+              </nb-list-item>
+              <nb-list-item *ngFor="let _ of firstCard.placeholders">
+                <ngx-news-post-placeholder></ngx-news-post-placeholder>
+              </nb-list-item>
+            </nb-list> -->
+          </nb-card>
+    </nb-tab>
+
+    <nb-tab tabTitle="Known">
+      <nb-card class="list-card" size="large">
+      <nb-card-header>All Known Recent Visitors</nb-card-header>
+      <nb-list>
+        <nb-list-item matRipple class="contact" *ngFor="let c of contacts">
+          <nb-user [picture]="c.user.picture" [name]="c.user.name" [title]="c.type" size="large"></nb-user>
+          <nb-icon icon="phone-outline" pack="eva"></nb-icon>
+        </nb-list-item>
+      </nb-list>
+      </nb-card>
+    </nb-tab>
+
+  </nb-tabset>
+</nb-card>
